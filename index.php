@@ -6,14 +6,10 @@
 <BODY>
 <fontsize=5>
 <?php
-	 function printbold($inputtext)
-	 {
-	 	print("<B>".$inputtext."</B>");
-	 }
-	 print("这行没有加重！<br>\n");
-	 printbold("这行加重了!!!");
-	 print("<br>\n");
-	 print("这行没有加重!<br>\n");
+	$monthname=array(1=>"january","february","march",
+	"april","may","june","july","august",
+	"september","october","november","december");
+	print("英语的“5月”是<b> $monthname[5]</b>。<br>\n");
 ?>
 </font>
 </BODY>
