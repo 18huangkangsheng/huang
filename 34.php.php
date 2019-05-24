@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8"> 
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<?php
+function checkinteger($number)	
+{
+	if($number>1)
+	{
+		return(checkinteger($number-1));
+	}
+	elseif($number<0)
+		{
+			return(checkinteger((-1)*$number-1));
+		}
+		else
+		{
+			if(($number>0)and($number<1))
+				{
+					return("当然不是");
+				}
+				else
+				{
+					return("是的");
+				}
+		}
+}
+print("<b>0是整数吗？</b>".
+     checkinteger(0)."<br>\n");
+print("<b>7是整数吗？</b>".
+     checkinteger(7)."<br>\n");
+print("<b>3.5呢？</b>".checkinteger(3.5)."<br>\n");
+print("<b>那么-5呢？</b>".checkinteger(-5)."<br>\n");
+print("<b>还有-9.2？</b>".checkinteger(-9.2)."<br>\n");
+?>
+</BODY>
+</HTML>
