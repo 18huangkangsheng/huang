@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8"> 
+</HEAD>
+<BODY>
+<?php
+$users=array("bob"=>"Yobert","steve"=>"btephen","jon"=>"aonathon");
+for(reset($users);$index=key($users);next($users))
+{
+	print("$index:$users[$index]<br>\n");
+}
+print("<hr>");
+asort($users);
+for(reset($users);$index=key($users);next($users))
+{
+	print("$index:$users[$index]<br>\n");
+}
+?>
+</BODY>
+</HTML>
