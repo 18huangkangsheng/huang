@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8"> 
+</HEAD>
+<BODY>
+<?php
+$aspell_link=aspell_new("english");
+if(aspell_check($aspell_link,"testt"))
+{
+	echo"testt:正确的拼写";
+}
+else
+{
+	echo"test：是一个错误的拼写";
+	print("<hr>");
+}
+if(aspell_check($aspell_link,"test"))
+{
+	echo"test：是一个正确的拼写";
+}
+else
+{
+	echo"test；是一个错误的拼写";
+}
+?>
+</BODY>
+</HTML>
